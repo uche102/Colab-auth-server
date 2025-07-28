@@ -2,7 +2,7 @@ import userService from "../service/user.service.js";
 
 class UserController {
   register = async (req, res) => {
-    if (!req.body)
+    if (req.body)
       return res.status(400).json({
         msg: "please fill in some data",
       });
